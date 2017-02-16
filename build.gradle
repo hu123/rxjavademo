@@ -1,0 +1,16 @@
+group 'org.hl'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    maven {url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+}
+
+dependencies {
+//    testCompile group: 'junit', name: 'junit', version: '4.10'
+//    compile "io.reactivex.rxjava2:rxjava:2.0.6"
+    compile"io.reactivex:rxjava:1.0.6"
+}
