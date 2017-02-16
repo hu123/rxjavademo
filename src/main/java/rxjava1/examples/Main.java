@@ -12,7 +12,7 @@ public class Main {
                     public void call(Subscriber<? super String> sub) {
                         System.out.println("我这边的Observable得到了调用了哦");
                         sub.onNext("如果我这边的参数是这样的呢????");
-                        System.out.println("辣么帅");
+                        System.out.println("测试一下onNext()方法调用后是否马上进入subscribe的方法,而不是在往下执行...");
                         sub.onError(new RuntimeException("我这边故意的....."));
                         sub.onCompleted();
                     }
@@ -22,7 +22,7 @@ public class Main {
         Subscriber<String> mySubscriber = new Subscriber<String>() {
             @Override
             public void onNext(String s) {
-                System.out.println(s);
+                System.out.println("onNext方法里面捕获到的是->"+ s);
             }
 
             @Override
