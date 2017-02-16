@@ -1,4 +1,4 @@
-package rxjava.examples;
+package rxjava1.examples;
 
 
 import rx.Observable;
